@@ -1,0 +1,4 @@
+algoritmo,tiempo,memoria
+MedicionPredecirLinkedList,937,26 kB,67,05 ms
+MedicionPredecirHashMap,1,33 MB,84,87 ms
+

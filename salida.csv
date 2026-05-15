@@ -1,6 +1,6 @@
 algoritmo,tiempo,memoria
-MedicionBuscarLinkedList,937,26 kB,3,73 s
-MedicionBuscarArrayList,937,27 kB,5,40 s
-MedicionBuscarHashMap,1,33 MB,5,52 ms
-MedicionBuscarTreeMap,1,33 MB,21,46 ms
+MedicionBuscarLinkedList,937,26 kB,3,28 s
+MedicionBuscarArrayList,937,27 kB,2,10 s
+MedicionBuscarHashMap,1,33 MB,2,78 ms
+MedicionBuscarTreeMap,1,33 MB,8,59 ms
 

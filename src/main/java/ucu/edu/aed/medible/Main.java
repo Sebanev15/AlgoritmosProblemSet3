@@ -7,6 +7,8 @@ import ucu.edu.aed.medible.medibles.MedicionBuscarArrayList;
 import ucu.edu.aed.medible.medibles.MedicionBuscarHashMap;
 import ucu.edu.aed.medible.medibles.MedicionBuscarLinkedList;
 import ucu.edu.aed.medible.medibles.MedicionBuscarTreeMap;
+import ucu.edu.aed.medible.medibles.MedicionPredecirHashMap;
+import ucu.edu.aed.medible.medibles.MedicionPredecirLinkedList;
 import ucu.edu.aed.tda.trie.TTrie;
 //import ucu.edu.aed.tda.trie.impl.Trie;
 import ucu.edu.aed.utils.FileUtils;
@@ -62,5 +64,24 @@ public class Main {
         }
 
         FileUtils.escribirLineas("./salida.csv", sb.toString());
+
+        //PARTE 5
+
+        List<Medible<String>> mediblesPredecir = new LinkedList<>();
+        // TODO mediblesPredecir.add(new MedicionPredecirTrie(trie));
+        mediblesPredecir.add(new MedicionPredecirLinkedList(linkedList));
+        mediblesPredecir.add(new MedicionPredecirHashMap(hashMap));
+
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append("algoritmo,tiempo,memoria\n");
+
+        for (Medible<String> m : mediblesPredecir) {
+            Medicion mi = m.medir(20, "cas");
+            mi.print();
+            sb2.append(mi.toCSV()).append("\n");
+        }
+
+        FileUtils.escribirLineas("./salida-predecir.csv", sb2.toString());
     }
+    
 }

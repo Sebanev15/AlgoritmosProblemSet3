@@ -1,12 +1,10 @@
 package ucu.edu.aed.ej9;
 
-import ucu.edu.aed.medible.lib.Medible;
 import ucu.edu.aed.tda.hash.Report;
 import ucu.edu.aed.tda.hash.THashimpl;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+
 import java.util.Random;
 
 public class MedicionTHash {

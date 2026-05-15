@@ -1,4 +1,4 @@
-package ucu.edu.aed.tda.trie.impl;
+package ucu.edu.aed.tda.trie;
 
 import ucu.edu.aed.tda.trie.Entry;
 import ucu.edu.aed.tda.trie.TTrie;

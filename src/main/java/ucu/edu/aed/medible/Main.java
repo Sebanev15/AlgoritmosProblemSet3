@@ -1,13 +1,13 @@
 package ucu.edu.aed.medible;
 
 
+import ucu.edu.aed.ej16.ArbolGenealogico;
 import ucu.edu.aed.medible.lib.Medible;
 import ucu.edu.aed.medible.lib.Medicion;
 import ucu.edu.aed.medible.medibles.MedicionBuscarLinkedList;
 import ucu.edu.aed.tda.trie.TTrie;
-import ucu.edu.aed.tda.trie.impl.Trie;
+//import ucu.edu.aed.tda.trie.impl.Trie;
 import ucu.edu.aed.utils.FileUtils;
-
 import java.util.*;
 
 public class Main {
@@ -32,18 +32,18 @@ public class Main {
             // insertar la palabra p en el linkedList
             linkedList.add(p);
             // insertar la palabra p en el arrayList
-//            arrayList.add(p);
+            arrayList.add(p);
             // insertar la palabra p en el hashMap
-            // TODO
+            hashMap.put(p, p);
             // insertar la palabra p en el treeMap
-            // TODO
+            treeMap.put(p, p);
         }
 
         List<Medible<List<String>>> medibles = new LinkedList<>();
         medibles.add(new MedicionBuscarLinkedList(linkedList));
 
         // TODO implementar MedicionBuscarArrayList
-//        medibles.add(new MedicionBuscarArrayList(arrayList));
+        //medibles.add(new MedicionBuscarArrayList(arrayList));
 
         // TODO implementar MedicionBuscarTrie
         // medibles.add(new MedicionBuscarTrie(trie));
@@ -67,4 +67,6 @@ public class Main {
 
         FileUtils.escribirLineas("./salida.csv", sb.toString());
     }
+
+    // Ejemplo de uso del Ejercicio 16
 }

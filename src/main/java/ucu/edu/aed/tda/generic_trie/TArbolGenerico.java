@@ -6,7 +6,7 @@ public interface TArbolGenerico<T extends Comparable<T>> {
     /**
      * Agrega un nodo como hijo del padre.
      */
-     boolean agregarHijo(Comparable<T> padre, T hijo);
+    boolean agregarHijo(Comparable<T> padre, T hijo);
 
     /**
      * Elimina un nodo utilizando el criterio. Los hijos se eliminan también.

@@ -1,5 +1,6 @@
 package ucu.edu.aed.ej16;
 
+
 public class Persona implements Comparable<Persona>{
     private String nombre;
     private int anioNacimiento;
@@ -23,5 +24,9 @@ public class Persona implements Comparable<Persona>{
     public int compareTo(Persona otro) {
         return this.nombre.compareTo(otro.nombre);
     }
-}
 
+    @Override
+    public String toString() {
+        return nombre + " (" + anioNacimiento + ")";
+    }
+}

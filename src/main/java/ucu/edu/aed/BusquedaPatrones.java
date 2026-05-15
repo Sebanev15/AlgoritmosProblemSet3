@@ -9,10 +9,10 @@ public class BusquedaPatrones {
 
     public BusquedaPatrones(String texto) {
         trie = new TTrieHashMap<>();
-        // Insertamos todos los sufijos del texto en el Trie
+        // Inserta todos los sufijos del texto en el Trie
         for (int i = 0; i < texto.length(); i++) {
             String sufijo = texto.substring(i);
-            trie.insertar(sufijo, i); // Guardamos la posición inicial del sufijo
+            trie.insertar(sufijo, i); // Guarda la posición inicial del sufijo
         }
     }
 

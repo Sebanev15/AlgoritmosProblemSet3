@@ -10,8 +10,8 @@ public class ImplArbolGenerico<T extends Comparable<T>> implements TArbolGeneric
     }
 
     @Override
-    public boolean agregarHijo(Comparable<T> padre, T hijo) {
-        return raiz.agregarHijo((T) padre, hijo);
+    public boolean agregarHijo(T padre, T hijo) {
+        return raiz.agregarHijo(padre, hijo);
     }
 
     @Override

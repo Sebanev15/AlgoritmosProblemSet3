@@ -5,7 +5,7 @@ import java.util.List;
 import ucu.edu.aed.tda.generic_trie.TNodoGenerico;
 import ucu.edu.aed.tda.generic_trie.ImplArbolGenerico;
 
-public class ArbolGenealogico{
+public class ArbolGenealogico {
     public ImplArbolGenerico<Persona> arbol;
 
     public ArbolGenealogico(Persona raiz) {

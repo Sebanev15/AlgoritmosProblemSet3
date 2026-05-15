@@ -2,9 +2,9 @@ package ucu.edu.aed.tda.trie;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.io.Serializable;
 
-public class NodoTrie<T> implements TNodoTrie<T> {
-    char caracter;
+public class NodoTrie<T> implements TNodoTrie<T>, Serializable {    char caracter;
     boolean esPalabra;
     T dato;
     List<NodoTrie<T>> hijos;

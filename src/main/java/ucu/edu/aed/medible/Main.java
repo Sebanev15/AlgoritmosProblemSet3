@@ -7,10 +7,12 @@ import ucu.edu.aed.medible.medibles.MedicionBuscarArrayList;
 import ucu.edu.aed.medible.medibles.MedicionBuscarHashMap;
 import ucu.edu.aed.medible.medibles.MedicionBuscarLinkedList;
 import ucu.edu.aed.medible.medibles.MedicionBuscarTreeMap;
+import ucu.edu.aed.medible.medibles.MedicionBuscarTrie;
 import ucu.edu.aed.medible.medibles.MedicionPredecirHashMap;
 import ucu.edu.aed.medible.medibles.MedicionPredecirLinkedList;
+import ucu.edu.aed.medible.medibles.MedicionPredecirTrie;
 import ucu.edu.aed.tda.trie.TTrie;
-//import ucu.edu.aed.tda.trie.impl.Trie;
+import ucu.edu.aed.tda.trie.Trie;
 import ucu.edu.aed.utils.FileUtils;
 
 import java.util.*;
@@ -20,7 +22,7 @@ public class Main {
     private static final int REPETICIONES = 20;
 
     public static void main(String[] args) {
-        //TTrie<String> trie = new Trie<>();
+        TTrie<String> trie = new Trie<>();
         LinkedList<String> linkedList = new LinkedList<>();
         ArrayList<String> arrayList = new ArrayList<>();
         Map<String, String> hashMap = new HashMap<>();
@@ -33,7 +35,7 @@ public class Main {
 
         for (String p : palabrasParaAgregar) {
             // insertar la palabra p en el trie
-            // TODO 
+            trie.insertar(p, p);
             // insertar la palabra p en el linkedList
             linkedList.add(p);
             // insertar la palabra p en el arrayList
@@ -44,11 +46,12 @@ public class Main {
             treeMap.put(p, p);
         }
 
+        //PARTE 3
+
         List<Medible<List<String>>> medibles = new LinkedList<>();
         medibles.add(new MedicionBuscarLinkedList(linkedList));
         medibles.add(new MedicionBuscarArrayList(arrayList));
-        // TODO implementar MedicionBuscarTrie
-        // medibles.add(new MedicionBuscarTrie(trie));
+        medibles.add(new MedicionBuscarTrie(trie));
         medibles.add(new MedicionBuscarHashMap(hashMap));
         medibles.add(new MedicionBuscarTreeMap(treeMap));
 
@@ -68,7 +71,7 @@ public class Main {
         //PARTE 5
 
         List<Medible<String>> mediblesPredecir = new LinkedList<>();
-        // TODO mediblesPredecir.add(new MedicionPredecirTrie(trie));
+        mediblesPredecir.add(new MedicionPredecirTrie(trie));
         mediblesPredecir.add(new MedicionPredecirLinkedList(linkedList));
         mediblesPredecir.add(new MedicionPredecirHashMap(hashMap));
 

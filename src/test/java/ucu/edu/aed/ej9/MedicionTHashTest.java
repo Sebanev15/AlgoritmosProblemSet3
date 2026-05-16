@@ -1,8 +1,6 @@
-package ucu.edu.aed.tda.ej9Test;
+package ucu.edu.aed.ej9;
 
 import org.junit.jupiter.api.Test;
-
-import ucu.edu.aed.ej9.MedicionTHash;
 
 public class MedicionTHashTest {
 
